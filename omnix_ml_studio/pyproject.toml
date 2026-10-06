@@ -1,0 +1,10 @@
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+[tool.ruff.lint]
+select = ["E", "F", "W", "B", "I"]
+ignore = ["E501", "E702", "E731", "B008", "B905", "I001"]
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = ["ignore::UserWarning", "ignore::FutureWarning", "ignore::DeprecationWarning", "ignore::RuntimeWarning"]
+markers = ["ui: end-to-end Streamlit AppTest workflows (slow)"]
